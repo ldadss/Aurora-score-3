@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+# Se regeneran con run_all.py o el notebook (datos sintéticos)
+data/telco.csv
+data/utilities.csv
+data/social.csv

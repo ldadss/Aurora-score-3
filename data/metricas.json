@@ -1,0 +1,215 @@
+{
+ "batch": {
+  "filas": 120000,
+  "segundos": 0.2645038190000264
+ },
+ "streaming": {
+  "eventos": 200000,
+  "segundos": 0.12881492799999705,
+  "eventos_por_seg": 1552615.0820035748
+ },
+ "latencia_ms": {
+  "p50": 0.9417180000355074,
+  "p95": 1.2761689999706505,
+  "max": 3.432831999987229
+ },
+ "tabla": [
+  {
+   "modelo": "M0 base",
+   "AUC": 0.708,
+   "KS": 0.303,
+   "razon_min": 0.665,
+   "mora_aprobados": 0.065
+  },
+  {
+   "modelo": "M1 reweighting",
+   "AUC": 0.704,
+   "KS": 0.297,
+   "razon_min": 0.722,
+   "mora_aprobados": 0.065
+  },
+  {
+   "modelo": "M2 reweighting + sin proxys",
+   "AUC": 0.707,
+   "KS": 0.301,
+   "razon_min": 0.935,
+   "mora_aprobados": 0.064
+  }
+ ],
+ "importancia": {
+  "pagos_a_tiempo_12m": 0.123,
+  "regularidad_recarga": 0.0287,
+  "ratio_ingreso_egreso": 0.0053,
+  "recarga_mensual_usd": 0.0021,
+  "ticket_promedio_usd": 0.0018,
+  "recarga_por_tx": 0.0012,
+  "cambios_dispositivo_6m": 0.0012,
+  "sesiones_30d": 0.0008,
+  "antiguedad_cuenta_meses": 0.0003,
+  "tx_mensuales": 0.0001
+ },
+ "explicacion_local": {
+  "score": 0.2671,
+  "contrib": {
+   "pagos_a_tiempo_12m": 0.1325,
+   "tx_mensuales": 0.0254,
+   "regularidad_recarga": -0.0166,
+   "recarga_mensual_usd": -0.0132,
+   "ticket_promedio_usd": -0.0131
+  }
+ },
+ "calidad": [
+  {
+   "fuente": "telco",
+   "modo": "batch",
+   "filas": 40000,
+   "completitud": 0.962,
+   "duplicados_id": 0,
+   "rezago_max_h": 72,
+   "pct_fuera_SLA": 0.201
+  },
+  {
+   "fuente": "utilities",
+   "modo": "batch",
+   "filas": 40000,
+   "completitud": 0.97,
+   "duplicados_id": 0,
+   "rezago_max_h": 720,
+   "pct_fuera_SLA": 0.0
+  },
+  {
+   "fuente": "billeteras",
+   "modo": "streaming",
+   "filas": 40000,
+   "completitud": 0.851,
+   "duplicados_id": 0,
+   "rezago_max_h": 0,
+   "pct_fuera_SLA": 0.0
+  },
+  {
+   "fuente": "app",
+   "modo": "streaming",
+   "filas": 40000,
+   "completitud": 1.0,
+   "duplicados_id": 0,
+   "rezago_max_h": 0,
+   "pct_fuera_SLA": 0.0
+  },
+  {
+   "fuente": "social",
+   "modo": "batch",
+   "filas": 40000,
+   "completitud": 0.701,
+   "duplicados_id": 0,
+   "rezago_max_h": 24,
+   "pct_fuera_SLA": 0.0
+  },
+  {
+   "fuente": "biometria",
+   "modo": "streaming",
+   "filas": 40000,
+   "completitud": 1.0,
+   "duplicados_id": 0,
+   "rezago_max_h": 0,
+   "pct_fuera_SLA": 0.0
+  }
+ ],
+ "n_train": 15230,
+ "n_test": 12170,
+ "mora_hist_obs": 0.13177938279711096,
+ "mora_real": 0.1141,
+ "composicion_train": {
+  "rural": 0.07,
+  "adulto_mayor": 0.033,
+  "informal": 0.112
+ },
+ "composicion_pob": {
+  "rural": 0.3,
+  "adulto_mayor": 0.099,
+  "informal": 0.28
+ },
+ "equidad": {
+  "M0 base": [
+   {
+    "grupo": "Rural",
+    "aprob_grupo": 0.444,
+    "aprob_resto": 0.667,
+    "razon_aprobacion": 0.665,
+    "falso_rechazo_grupo": 0.524,
+    "falso_rechazo_resto": 0.299
+   },
+   {
+    "grupo": "Adulto mayor (60+)",
+    "aprob_grupo": 0.585,
+    "aprob_resto": 0.602,
+    "razon_aprobacion": 0.973,
+    "falso_rechazo_grupo": 0.384,
+    "falso_rechazo_resto": 0.365
+   },
+   {
+    "grupo": "Trabajo informal",
+    "aprob_grupo": 0.561,
+    "aprob_resto": 0.615,
+    "razon_aprobacion": 0.912,
+    "falso_rechazo_grupo": 0.404,
+    "falso_rechazo_resto": 0.352
+   }
+  ],
+  "M1 reweighting": [
+   {
+    "grupo": "Rural",
+    "aprob_grupo": 0.473,
+    "aprob_resto": 0.655,
+    "razon_aprobacion": 0.722,
+    "falso_rechazo_grupo": 0.494,
+    "falso_rechazo_resto": 0.312
+   },
+   {
+    "grupo": "Adulto mayor (60+)",
+    "aprob_grupo": 0.587,
+    "aprob_resto": 0.601,
+    "razon_aprobacion": 0.976,
+    "falso_rechazo_grupo": 0.384,
+    "falso_rechazo_resto": 0.365
+   },
+   {
+    "grupo": "Trabajo informal",
+    "aprob_grupo": 0.568,
+    "aprob_resto": 0.612,
+    "razon_aprobacion": 0.927,
+    "falso_rechazo_grupo": 0.398,
+    "falso_rechazo_resto": 0.355
+   }
+  ],
+  "M2 reweighting + sin proxys": [
+   {
+    "grupo": "Rural",
+    "aprob_grupo": 0.572,
+    "aprob_resto": 0.612,
+    "razon_aprobacion": 0.935,
+    "falso_rechazo_grupo": 0.392,
+    "falso_rechazo_resto": 0.355
+   },
+   {
+    "grupo": "Adulto mayor (60+)",
+    "aprob_grupo": 0.576,
+    "aprob_resto": 0.603,
+    "razon_aprobacion": 0.956,
+    "falso_rechazo_grupo": 0.393,
+    "falso_rechazo_resto": 0.363
+   },
+   {
+    "grupo": "Trabajo informal",
+    "aprob_grupo": 0.586,
+    "aprob_resto": 0.605,
+    "razon_aprobacion": 0.969,
+    "falso_rechazo_grupo": 0.379,
+    "falso_rechazo_resto": 0.361
+   }
+  ]
+ },
+ "n_features": {
+  "base": 15,
+  "final": 12
+ }
+}

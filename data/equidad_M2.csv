@@ -1,0 +1,4 @@
+grupo,aprob_grupo,aprob_resto,razon_aprobacion,falso_rechazo_grupo,falso_rechazo_resto
+Rural,0.572,0.612,0.935,0.392,0.355
+Adulto mayor (60+),0.576,0.603,0.956,0.393,0.363
+Trabajo informal,0.586,0.605,0.969,0.379,0.361
